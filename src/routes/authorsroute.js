@@ -31,10 +31,13 @@ authorsRouter.get('/addauthor',function(req,res){
 
 //router to add author
 authorsRouter.post('/add', function (req, res) {
+    console.log("Hello")
+    console.log (req.body.title);
+    console.log (req.body.image);
 
     var item={
         title:req.body.title,
-        image:req.body.images,
+        image:req.body.image, //**CS2 ** Changed from images to image
         about:req.body.about
     }
     console.log(item)  ;
@@ -64,6 +67,7 @@ authorsRouter.get('/:id',function(req,res){
 
 
 //router to delete author
+//***CS2** P2 ***
 authorsRouter.post('/delete', function (req, res) {
 
     const id = req.body.id;  
@@ -79,6 +83,7 @@ authorsRouter.post('/delete', function (req, res) {
 
 
 //router to edit author
+//***CS2** P2 ***
 authorsRouter.post('/edit', function (req, res) {
 
     authordata.findById(req.body.id, function(err, data){
@@ -95,7 +100,8 @@ authorsRouter.post('/edit', function (req, res) {
 
 
 //router to update author
-authorsRouter.post('/update', function (req, res) {
+//***CS2** P2 ***
+authorsRouter.put('/update', function (req, res) {
 
     authordata.findByIdAndUpdate(req.body.id, { $set: req.body }, function (err, data) {
         if (err) {

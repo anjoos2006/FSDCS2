@@ -1,4 +1,4 @@
-var users=[{
+var user=[{ // **CS2** Changed from users to user
     "id":1,
     "uid":"aiswaryawalter@gmail.com",
     "pwd":"aiswarya"
@@ -16,4 +16,4 @@ var users=[{
 ]
 
 
-module.exports=user;
+module.exports=user; 

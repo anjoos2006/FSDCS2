@@ -1,5 +1,12 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Library');
+const dbUrl= 'mongodb+srv://admin:Admin1234@cluster0.864fo.mongodb.net/Library?retryWrites=true&w=majority';
+
+mongoose.connect(dbUrl,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(console.log("MongoDB connected"))
+.catch(err => console.log(err));  //**CS2 **/
+
 const Schema = mongoose.Schema;
 
 

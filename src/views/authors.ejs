@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pustakam</title>
+    <!-- ***CS2** P2 -->
+    <title>Authors</title>
 
     <script src="https://kit.fontawesome.com/859e7ab76e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -75,8 +76,8 @@
               <%for(let i=0;i<authors.length;i++){%>
 
             <li>
-             
-              <img class = "rounded-circle image" alt="" src="/images/<%=authors[i].image%>" />
+             <!-- Removed an unwanted / and included class -->
+              <img class = "rounded-circle image" alt="" src="/images/<%=authors[i].image%>" class="w-100">  
               <div class="info rounded">
                 <h2 class="title"><%=authors[i].title%></h2>
                 <br>
